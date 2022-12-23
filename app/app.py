@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 from sklearn.metrics import precision_score, recall_score 
-from sklearn.metrics import  plot_confusion_matrix, plot_roc_curve, plot_precision_recall_curve
+from scikitplot.metrics import  plot_confusion_matrix, plot_roc_curve, plot_precision_recall_curve
 
 header = st.container()
 dataset = st.container()
@@ -99,7 +99,7 @@ with preprocessing:
 			st.write("Recall: ", recall_score(test_tipo, pred, labels=class_names).round(2))
 
 			st.subheader("Confusion Matrix") 
-			plot_confusion_matrix(svc, test_micro, test_tipo, display_labels=class_names)
+			plot_confusion_matrix(svc, test_micro, test_tipo, labels=class_names)
 			st.pyplot()
 		        
 			st.subheader("ROC Curve") 
