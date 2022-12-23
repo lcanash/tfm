@@ -95,11 +95,11 @@ with preprocessing:
 			st.subheader("Model score:")
 
 			st.write("Accuracy: ", svc.score(test_micro, test_tipo).round(2))
-			st.write("Precision: ", precision_score(test_tipo, pred, labels=class_names).round(2))
+			st.write("Precision: ", precision_score(test_tipo, pred, target_names=class_names).round(2))
 			st.write("Recall: ", recall_score(test_tipo, pred, labels=class_names).round(2))
 
 			st.subheader("Confusion Matrix") 
-			plot_confusion_matrix(svc, test_micro, test_tipo, labels=class_names)
+			plot_confusion_matrix(svc, test_micro, test_tipo)
 			st.pyplot()
 		        
 			st.subheader("ROC Curve") 
