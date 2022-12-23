@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import sklearn as sk
-import scikitplot as skplt
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
