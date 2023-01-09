@@ -18,7 +18,7 @@ with dataset:
 	uploaded_file = st.file_uploader("Choose a file")
 	if uploaded_file is not None:
 		lung_data = pd.read_csv(uploaded_file)
-		model = pickle.loads(modelo.sav)
+		model = pickle.loads(app/modelo.sav)
 	else:
 		st.stop()  
 			
