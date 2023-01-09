@@ -28,7 +28,7 @@ with preprocessing:
 	st.header("Data")
 
 	st.text("Here is a view of your data:")
-	st.write(lung_data.head())
+	
 
 with prediction:
 	model.predict(lung_data)
