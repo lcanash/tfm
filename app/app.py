@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import pickle as pk
+import pickle
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -24,6 +24,7 @@ with dataset:
 	uploaded_file = st.file_uploader("Choose a file")
 	if uploaded_file is not None:
 		lung_data = pd.read_csv(uploaded_file)
+		model = pickle.loads(modelo.sav)
 	else:
 		st.stop()  
 			
@@ -39,8 +40,5 @@ with preprocessing:
 	feature = st.text_input("First, choose which feature shall be the the predicted variable for the model:")
 	
 with model:
-	svct = pk.load(open("modelo.sav","rb")
-	pred = svct.predict(lung_data)
 
 with results:
-	st.write(pred)
