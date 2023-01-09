@@ -36,4 +36,4 @@ with prediction:
 	
 with results:
 	st.header("Results")
-	print(pred)
+	st.write(pred)
