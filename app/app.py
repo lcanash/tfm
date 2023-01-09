@@ -17,7 +17,7 @@ with dataset:
 
 	uploaded_file = st.file_uploader("Choose a file")
 	uploaded_model = st.file_uploader("Choose a model")
-	if uploaded_file is not None:
+	if uploaded_file is not None and uploaded_model is not None:
 		lung_data = pd.read_csv(uploaded_file)
 		model = pickle.loads(uploaded_model.read())
 	else:
