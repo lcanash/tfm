@@ -16,9 +16,10 @@ with dataset:
 	st.text("Select your microarray dataset:") 
 
 	uploaded_file = st.file_uploader("Choose a file")
+	uploaded_model = st.file_uploader("Choose a model")
 	if uploaded_file is not None:
 		lung_data = pd.read_csv(uploaded_file)
-		model = pickle.loads(github.com/lcanash/tfm/blob/main/app/modelo.sav)
+		model = pickle.loads(uploaded_model.read())
 	else:
 		st.stop()  
 			
