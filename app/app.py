@@ -30,5 +30,3 @@ with preprocessing:
 
 	if lung_data is not None:
 		st.write(lung_data.columns)
-
-	feature = st.text_input("First, choose which feature shall be the the predicted variable for the model:")
