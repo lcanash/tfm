@@ -9,7 +9,7 @@ prediction = st.container()
 results = st.container()
 
 with header:
-	st.title("Application to detect samples with lungh cancer from microarray datasets")
+	st.title("Application to detect samples with lung cancer from microarray datasets")
 
 with dataset:
 	st.header("Load dataset")
