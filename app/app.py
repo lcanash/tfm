@@ -5,7 +5,7 @@ import pickle
 header = st.container()
 dataset = st.container()
 preprocessing = st.container()
-model = st.container()
+prediction = st.container()
 results = st.container()
 
 with header:
@@ -30,5 +30,5 @@ with preprocessing:
 	st.text("Here is a view of your data:")
 	st.write(lung_data.head())
 
-with model:
+with prediction:
 	model.predict(lung_data)
