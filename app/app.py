@@ -38,7 +38,3 @@ with preprocessing:
 		st.write(lung_data.columns)
 
 	feature = st.text_input("First, choose which feature shall be the the predicted variable for the model:")
-	
-with model:
-
-with results:
