@@ -31,4 +31,8 @@ with preprocessing:
 	
 
 with prediction:
-	model.predict(lung_data)
+	pred = model.predict(lung_data)
+
+	
+with results:
+	print(pred)
