@@ -27,7 +27,5 @@ with dataset:
 with preprocessing:
 	st.header("Preprocessing")
 
-	st.text("Here is a list of the features in the data:")
-
-	if lung_data is not None:
-		st.write(lung_data.columns)
+	st.text("Here is a view of your data:")
+	st.write(lung_data)
