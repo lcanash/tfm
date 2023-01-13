@@ -24,7 +24,7 @@ with example:
 	if exampled:
 		DATA_URL = ("./app/sample.csv")
 		sample = pd.read_csv(DATA_URL)
-		st.markdown("The samples used for this prediction come from the repository Curated Microarray Database(CuMiDa). For more information about the dataset, please see the last section of this app. In this case, 6 samples were extracted from the original dataset randomly. Half of the samples are tumoral and the other half are normal."
+		st.markdown("The samples used for this prediction come from the repository Curated Microarray Database(CuMiDa). For more information about the dataset, please see the last section of this app. In this case, 6 samples were extracted from the original dataset randomly. Half of the samples are tumoral and the other half are normal.")
 		st.write(sample)
 		prueba = st.button("Predict")
 		if prueba:
