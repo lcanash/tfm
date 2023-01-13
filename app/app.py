@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import pickle
-import SessionState
 
 header = st.container()
 example = st.container()
