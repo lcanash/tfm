@@ -76,4 +76,5 @@ with information:
 		st.markdown("* **Accuracy:** 0.92")
 		st.markdown("* **Precision:** 0.92")
 		st.markdown("* **Recall:** 0.92")
+		st.markdown("* **F1 Score:** 0.92")
 		
