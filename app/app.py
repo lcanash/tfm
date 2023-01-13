@@ -24,11 +24,15 @@ with example:
 	if exampled:
 		DATA_URL = ("./app/sample.csv")
 		sample = pd.read_csv(DATA_URL)
+		
 		st.markdown("The samples used for this prediction come from the repository Curated Microarray Database(CuMiDa). In this case, 6 samples were extracted from the original dataset randomly. Half of the samples are tumoral and the other half are normal.")
+		st.markdown("Here is the data:")
 		st.write(sample)
-		prueba = st.button("Predict")
+		
+		st.markdown("And here are the predictions:")
 		pre = model.predict(sample)
 		st.write(pre)
+		
 		st.markdown("For more information about the dataset, please see the last section of this app.")
 with dataset:
 	st.header("Load dataset")
