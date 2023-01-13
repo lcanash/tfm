@@ -11,7 +11,7 @@ results = st.container()
 
 
 MODEL_URL = ("./app/model.sav")
-model = pickle.load(open("MODEL_URL","rb"))
+model = pickle.load(open(MODEL_URL,"rb"))
 
 with header:
 	st.title("Application to detect samples with lung cancer from microarray datasets")
