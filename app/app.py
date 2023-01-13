@@ -66,7 +66,7 @@ with information:
 	info = st.button("Info")
 	if info:
 		st.header("About the data...")
-		st.markdown("The data comes from the repository Curated Microarray Database(CuMiDa). This database contains 78 sets of cancer microarray datasets from 30.000 different studies that were obtained from the Gene Expression Omnibus(GEO). The sets were handpicked and extensively curated to be used solely for Machine Learning, as well as submitted to background correction, normalization, sample quality analysis and were manually edited to eliminate erroneous probes.
+		st.markdown("The data comes from the repository Curated Microarray Database(CuMiDa). This database contains 78 sets of cancer microarray datasets from 30.000 different studies that were obtained from the Gene Expression Omnibus(GEO). The sets were handpicked and extensively curated to be used solely for Machine Learning, as well as submitted to background correction, normalization, sample quality analysis and were manually edited to eliminate erroneous probes.")
 
 		st.markdown("The dataset used for the model consists of 114 samples of lung cancer microarrays, each having 54675 different measures of microarrays. The samples have been diagnosed tumoral or normal depending on the presence of cancer or not. In this case 56 of the samples are tumoral and 58 normal.")
 		
