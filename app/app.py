@@ -8,6 +8,7 @@ dataset = st.container()
 preprocessing = st.container()
 prediction = st.container()
 results = st.container()
+information = st.container()
 
 
 MODEL_URL = ("./app/modelo.sav")
@@ -17,9 +18,17 @@ with header:
 	st.title("Application to detect samples with lung cancer from microarray datasets")
 
 with example:
-	DATA_URL = ("./app/sample.csv")
-	example = pd.read_csv(DATA_URL)
-	
+	st.header("Example data")
+	st.text("Click here to see an example prediction with some internal samples")
+	exampled = st.button("Example")
+	if exampled:
+		DATA_URL = ("./app/sample.csv")
+		sample = pd.read_csv(DATA_URL)
+		st.markdown("The samples used for this prediction come from the repository Curated Microarray Database(CuMiDa). For more information about the dataset, please see the last section of this app. In this case, 6 samples were extracted from the original dataset randomly. Half of the samples are tumoral and the other half are normal."
+		st.write(sample)
+		prueba = st.button("Predict")
+		if prueba:
+			    st.write(model.predict(sample)
 with dataset:
 	st.header("Load dataset")
 	st.text("Select your microarray dataset:") 
@@ -49,3 +58,7 @@ with preprocessing:
 				with results:
 					st.header("Results")
 					st.write(pred)
+
+with information:
+	st.text("You can view some information about the model and the data used to train it.")
+	
