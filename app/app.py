@@ -46,7 +46,7 @@ with dataset:
 			
 with preprocessing:
 	st.header("Data")
-	st.text("Here is a view of your data:")
+	st.markdown("Here is a view of your data:")
 	st.write(lung_data)
 	
 with prediction:
