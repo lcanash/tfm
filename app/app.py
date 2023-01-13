@@ -11,7 +11,7 @@ results = st.container()
 
 
 MODEL_URL = ("./app/model.sav")
-model = pickle.loads(MODEL_URL)
+model = pickle.load(MODEL_URL)
 
 
 with header:
