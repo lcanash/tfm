@@ -19,7 +19,7 @@ with header:
 
 with example:
 	st.header("Example data")
-	st.text("Click here to see an example prediction with some internal samples")
+	st.markdown("Click here to see an example prediction with some internal samples")
 	exampled = st.button("Example")
 	if exampled:
 		DATA_URL = ("./app/sample.csv")
@@ -32,7 +32,7 @@ with example:
 		st.markdown("For more information about the dataset, please see the last section of this app.")
 with dataset:
 	st.header("Load dataset")
-	st.text("Select your microarray dataset:") 
+	st.markdown("Select your microarray dataset:") 
 
 	uploaded_file = st.file_uploader("Choose a file")
 	submitted = st.button("Submit")
@@ -61,5 +61,5 @@ with preprocessing:
 					st.write(pred)
 
 with information:
-	st.text("You can view some information about the model and the data used to train it.")
+	st.markdown("You can view some information about the model and the data used to train it.")
 	
