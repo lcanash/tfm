@@ -19,7 +19,7 @@ with header:
 
 with example:
 	st.header("Example data")
-	st.markdown("Click here to see an example prediction with some internal samples")
+	st.markdown("Click here to see an example prediction with some internal samples.")
 	exampled = st.button("Example")
 	if exampled:
 		DATA_URL = ("./app/sample.csv")
@@ -28,7 +28,8 @@ with example:
 		st.write(sample)
 		prueba = st.button("Predict")
 		if prueba:
-			    st.write(model.predict(sample))
+			pre = model.predict(sample)
+			st.write(pre)
 		st.markdown("For more information about the dataset, please see the last section of this app.")
 with dataset:
 	st.header("Load dataset")
@@ -62,4 +63,16 @@ with preprocessing:
 
 with information:
 	st.markdown("You can view some information about the model and the data used to train it.")
-	
+	info = st.button("Info")
+	if info:
+		st.header("About the data...")
+		st.markdown("The data comes from the repository Curated Microarray Database(CuMiDa). This database contains 78 sets of cancer microarray datasets from 30.000 different studies that were obtained from the Gene Expression Omnibus(GEO). The sets were handpicked and extensively curated to be used solely for Machine Learning, as well as submitted to background correction, normalization, sample quality analysis and were manually edited to eliminate erroneous probes.
+
+		st.markdown("The dataset used for the model consists of 114 samples of lung cancer microarrays, each having 54675 different measures of microarrays. The samples have been diagnosed tumoral or normal depending on the presence of cancer or not. In this case 56 of the samples are tumoral and 58 normal.")
+		
+		st.header("About the model...")
+		st.markdown("The model used for the classification consists on a Support Vector Machine. It has been trained with the described dataset and tuned in order to have the best posible efficiency. It's evaluations scores with the original data are:")
+		st.markdown("* **Accuracy:** 0.92")
+		st.markdown("* **Precision:** 0.92")
+		st.markdown("* **Recall:** 0.92")
+		
