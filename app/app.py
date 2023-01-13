@@ -19,13 +19,13 @@ with header:
 with example:
 	DATA_URL = ("./app/sample.csv")
 	example = pd.read_csv(DATA_URL)
-	st.write(example)
 	
 with dataset:
 	st.header("Load dataset")
 	st.text("Select your microarray dataset:") 
 
 	uploaded_file = st.file_uploader("Choose a file")
+	submitted = st.button("Submit")
 	if uploaded_file is not None:
 		lung_data = pd.read_csv(uploaded_file)
 	else:
@@ -34,15 +34,18 @@ with dataset:
 
 with preprocessing:
 	st.header("Data")
-
-	st.text("Here is a view of your data:")
-	st.write(lung_data)
+	if submitted:
+		st.text("Here is a view of your data:")
+		st.write(lung_data)
 	
 
-with prediction:
-	pred = model.predict(lung_data)
+		with prediction:
+			
+			predict = stbutton("Predict")
+			if predict:
+				pred = model.predict(lung_data)
 
 	
-with results:
-	st.header("Results")
-	st.write(pred)
+				with results:
+					st.header("Results")
+					st.write(pred)
