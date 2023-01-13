@@ -41,7 +41,7 @@ with preprocessing:
 
 		with prediction:
 			
-			predict = stbutton("Predict")
+			predict = st.button("Predict")
 			if predict:
 				pred = model.predict(lung_data)
 
