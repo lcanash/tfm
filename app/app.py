@@ -17,7 +17,7 @@ with header:
 	st.title("Application to detect samples with lung cancer from microarray datasets")
 
 with example:
-	DATA_URL = ("./app/samplet.csv")
+	DATA_URL = ("./app/sample.csv")
 	example = pd.read_csv(DATA_URL)
 	st.write(example)
 	
