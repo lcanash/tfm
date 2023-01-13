@@ -9,6 +9,11 @@ preprocessing = st.container()
 prediction = st.container()
 results = st.container()
 
+
+MODEL_URL = ("./app/model.sav")
+model = pickle.loads(MODEL_URL)
+
+
 with header:
 	st.title("Application to detect samples with lung cancer from microarray datasets")
 
@@ -21,9 +26,6 @@ with dataset:
 	st.header("Load dataset")
 	st.text("Select your microarray dataset:") 
 
-	MODEL_URL = ("./app/model.sav")
-	model = pickle.loads(MODEL_URL.read())
-	
 	uploaded_file = st.file_uploader("Choose a file")
 	if uploaded_file is not None:
 		lung_data = pd.read_csv(uploaded_file)
