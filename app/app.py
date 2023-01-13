@@ -3,6 +3,7 @@ import pandas as pd
 import pickle
 
 header = st.container()
+example = st.container()
 dataset = st.container()
 preprocessing = st.container()
 prediction = st.container()
@@ -11,6 +12,11 @@ results = st.container()
 with header:
 	st.title("Application to detect samples with lung cancer from microarray datasets")
 
+with example:
+	DATA_URL = ("samplen.csv")
+	example = pd.read_csv(DATA_URL)
+	st.write(example)
+	
 with dataset:
 	st.header("Load dataset")
 	st.text("Select your microarray dataset:") 
