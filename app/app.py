@@ -18,7 +18,6 @@ with header:
 	st.title("Application to detect samples with lung cancer from microarray datasets")
 
 with example:
-	exampled
 	st.header("Example data")
 	st.markdown("Click here to see an example prediction with some internal samples.")
 	exampled = st.button("Example")
