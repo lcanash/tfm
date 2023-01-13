@@ -28,7 +28,7 @@ with example:
 		st.write(sample)
 		prueba = st.button("Predict")
 		if prueba:
-			    st.write(model.predict(sample)
+			    st.write(model.predict(sample))
 with dataset:
 	st.header("Load dataset")
 	st.text("Select your microarray dataset:") 
