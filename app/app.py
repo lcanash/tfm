@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import SessionState
 
 header = st.container()
 example = st.container()
@@ -18,6 +19,7 @@ with header:
 	st.title("Application to detect samples with lung cancer from microarray datasets")
 
 with example:
+	exampled
 	st.header("Example data")
 	st.markdown("Click here to see an example prediction with some internal samples.")
 	exampled = st.button("Example")
@@ -27,39 +29,33 @@ with example:
 		st.markdown("The samples used for this prediction come from the repository Curated Microarray Database(CuMiDa). In this case, 6 samples were extracted from the original dataset randomly. Half of the samples are tumoral and the other half are normal.")
 		st.write(sample)
 		prueba = st.button("Predict")
-		if prueba:
-			pre = model.predict(sample)
-			st.write(pre)
+		pre = model.predict(sample)
+		st.write(pre)
 		st.markdown("For more information about the dataset, please see the last section of this app.")
 with dataset:
 	st.header("Load dataset")
 	st.markdown("Select your microarray dataset:") 
 
 	uploaded_file = st.file_uploader("Choose a file")
-	submitted = st.button("Submit")
 	if uploaded_file is not None:
 		lung_data = pd.read_csv(uploaded_file)
 	else:
 		st.stop()  
 			
-
 with preprocessing:
 	st.header("Data")
-	if submitted:
-		st.text("Here is a view of your data:")
-		st.write(lung_data)
+	st.text("Here is a view of your data:")
+	st.write(lung_data)
 	
-
-		with prediction:
+with prediction:
 			
-			predict = st.button("Predict")
-			if predict:
-				pred = model.predict(lung_data)
+predict = st.button("Predict")
+if predict:
+	pred = model.predict(lung_data)
 
-	
-				with results:
-					st.header("Results")
-					st.write(pred)
+	with results:
+		st.header("Results")
+		st.write(pred)
 
 with information:
 	st.header("Information")
