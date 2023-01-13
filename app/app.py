@@ -49,13 +49,13 @@ with preprocessing:
 	
 with prediction:
 			
-predict = st.button("Predict")
-if predict:
-	pred = model.predict(lung_data)
+	predict = st.button("Predict")
+	if predict:
+		pred = model.predict(lung_data)
 
-	with results:
-		st.header("Results")
-		st.write(pred)
+		with results:
+			st.header("Results")
+			st.write(pred)
 
 with information:
 	st.header("Information")
