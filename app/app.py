@@ -10,7 +10,7 @@ prediction = st.container()
 results = st.container()
 
 
-MODEL_URL = ("./app/model.sav")
+MODEL_URL = ("./app/modelo.sav")
 model = pickle.load(open(MODEL_URL,"rb"))
 
 with header:
