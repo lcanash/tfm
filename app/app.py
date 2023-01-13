@@ -62,6 +62,7 @@ with preprocessing:
 					st.write(pred)
 
 with information:
+	st.header("Information")
 	st.markdown("You can view some information about the model and the data used to train it.")
 	info = st.button("Info")
 	if info:
