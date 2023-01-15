@@ -54,13 +54,15 @@ with dataset:
 				if predict:
 					try:
 						pred = model.predict(lung_data)
+						
+						with results:
+							st.header("Results")
+							st.write(pred)
+
 					except:
 						st.markdown("Unsupported data")
 
-				with results:
-					st.header("Results")
-					st.write(pred)
-
+					
 with information:
 	st.header("Information")
 	st.markdown("You can view some information about the model and the data used to train it.")
