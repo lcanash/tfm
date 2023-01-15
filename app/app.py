@@ -59,6 +59,7 @@ with prediction:
 			st.header("Results")
 			st.write(pred)
 
+
 with information:
 	st.header("Information")
 	st.markdown("You can view some information about the model and the data used to train it.")
@@ -75,4 +76,3 @@ with information:
 		st.markdown("* **Precision:** 0.92")
 		st.markdown("* **Recall:** 0.92")
 		st.markdown("* **F1 Score:** 0.92")
-		
