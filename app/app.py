@@ -53,7 +53,10 @@ with prediction:
 			
 	predict = st.button("Predict")
 	if predict:
-		pred = model.predict(lung_data)
+		try:
+			pred = model.predict(lung_data)
+		except:
+			st.markdown("Unsupported data")
 
 		with results:
 			st.header("Results")
