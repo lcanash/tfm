@@ -43,6 +43,22 @@ with dataset:
 		lung_data = pd.read_csv(uploaded_file)
 	else:
 		st.stop()  
+with information:
+	st.header("Information")
+	st.markdown("You can view some information about the model and the data used to train it.")
+	info = st.button("Info")
+	if info:
+		st.header("About the data...")
+		st.markdown("The data comes from the repository Curated Microarray Database(CuMiDa). This database contains 78 sets of cancer microarray datasets from 30.000 different studies that were obtained from the Gene Expression Omnibus(GEO). The sets were handpicked and extensively curated to be used solely for Machine Learning, as well as submitted to background correction, normalization, sample quality analysis and were manually edited to eliminate erroneous probes.")
+
+		st.markdown("The dataset used for the model consists of 114 samples of lung cancer microarrays, each having 54675 different measures of microarrays. The samples have been diagnosed tumoral or normal depending on the presence of cancer or not. In this case 56 of the samples are tumoral and 58 normal.")
+		
+		st.header("About the model...")
+		st.markdown("The model used for the classification consists on a Support Vector Machine. It has been trained with the described dataset and tuned in order to have the best posible efficiency. It's evaluations scores with the original data are:")
+		st.markdown("* **Accuracy:** 0.92")
+		st.markdown("* **Precision:** 0.92")
+		st.markdown("* **Recall:** 0.92")
+		st.markdown("* **F1 Score:** 0.92")
 			
 with preprocessing:
 	st.header("Data")
@@ -63,19 +79,3 @@ with prediction:
 			st.write(pred)
 
 
-with information:
-	st.header("Information")
-	st.markdown("You can view some information about the model and the data used to train it.")
-	info = st.button("Info")
-	if info:
-		st.header("About the data...")
-		st.markdown("The data comes from the repository Curated Microarray Database(CuMiDa). This database contains 78 sets of cancer microarray datasets from 30.000 different studies that were obtained from the Gene Expression Omnibus(GEO). The sets were handpicked and extensively curated to be used solely for Machine Learning, as well as submitted to background correction, normalization, sample quality analysis and were manually edited to eliminate erroneous probes.")
-
-		st.markdown("The dataset used for the model consists of 114 samples of lung cancer microarrays, each having 54675 different measures of microarrays. The samples have been diagnosed tumoral or normal depending on the presence of cancer or not. In this case 56 of the samples are tumoral and 58 normal.")
-		
-		st.header("About the model...")
-		st.markdown("The model used for the classification consists on a Support Vector Machine. It has been trained with the described dataset and tuned in order to have the best posible efficiency. It's evaluations scores with the original data are:")
-		st.markdown("* **Accuracy:** 0.92")
-		st.markdown("* **Precision:** 0.92")
-		st.markdown("* **Recall:** 0.92")
-		st.markdown("* **F1 Score:** 0.92")
