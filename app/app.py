@@ -43,23 +43,23 @@ with dataset:
 	if uploaded_file is not None:
 		lung_data = pd.read_csv(uploaded_file)
 
-with preprocessing:
-	st.header("Data")
-	st.markdown("Here is a view of your data:")
-	st.write(lung_data)
+		with preprocessing:
+			st.header("Data")
+			st.markdown("Here is a view of your data:")
+			st.write(lung_data)
 	
-with prediction:
+			with prediction:
 			
-	predict = st.button("Predict")
-	if predict:
-		try:
-			pred = model.predict(lung_data)
-		except:
-			st.markdown("Unsupported data")
+				predict = st.button("Predict")
+				if predict:
+					try:
+						pred = model.predict(lung_data)
+					except:
+						st.markdown("Unsupported data")
 
-		with results:
-			st.header("Results")
-			st.write(pred)
+				with results:
+					st.header("Results")
+					st.write(pred)
 
 with information:
 	st.header("Information")
